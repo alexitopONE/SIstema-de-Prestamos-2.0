@@ -36,7 +36,7 @@ class Usuarios(models.Model):
     nombre = models.CharField(max_length=100)
     apellido_paterno = models.CharField(max_length=100)
     apellido_materno = models.CharField(max_length=100, blank=True, null=True)
-    email = models.CharField(unique=True, max_length=150, blank=True, null=True)
+    email = models.CharField(unique=True, max_length=150, blank=True)
     estatus = models.CharField(max_length=50)
     codigo_barras = models.CharField(unique=True, max_length=100, blank=True, null=True)
     rol = models.ForeignKey(Rol, models.DO_NOTHING, db_column='rol')
